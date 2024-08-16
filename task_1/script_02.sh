@@ -2,11 +2,15 @@
 
 # This script is written for checking a CSV file if a line contains same values in 2nd & 5th Coulmn and adding a prefix to the 5th & 9th Column.
 
+
+prefix_adding() {
+
+
 prefix=PREFIX_ADDED
-csv_file="csv_files/customers-10.csv"
+csv_file=$1
 temp_file=prefix_added_file.txt
 header=$(head -n 1 "$csv_file")
-[ ! -e filename.txt ] && touch $temp_file
+[ ! -e $temp_file ] && touch $temp_file
 
 echo "$header" > $temp_file
 
@@ -32,3 +36,8 @@ echo "$line"
 fi 
 
 done >> $temp_file
+
+}
+
+csv_file="csv_files/customers-10.csv"
+prefix_adding "$csv_file"

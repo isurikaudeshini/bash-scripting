@@ -7,7 +7,7 @@ echo -e "This script prints the 6th & 10th column of a 10 column CSV.\n"
 
 # Check if number of columns are greater than or equal 10 & print 6th & 10th column
 
-prefix_adding() {
+print_columns() {
 
 COLUMN_COUNT=$(awk -F ',' '{print NF; exit}' $1)
 
@@ -21,4 +21,4 @@ fi
 
 CSV_FILE="./csv_files/trade.csv"
 
-prefix_adding "$CSV_FILE"
+print_columns "$CSV_FILE"
