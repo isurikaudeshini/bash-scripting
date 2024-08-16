@@ -19,6 +19,6 @@ fi
 
 }
 
-csv_file="./csv_files/trade.csv"
+CSV_FILE="./csv_files/trade.csv"
 
-prefix_adding "$csv_file"
+prefix_adding "$CSV_FILE"
